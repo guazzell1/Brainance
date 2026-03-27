@@ -1879,24 +1879,8 @@ section {
 .hero2 {
   position: relative;
   background: var(--bg);
-  padding: 120px 0 80px;
+  padding: 160px 0 80px;
   overflow: hidden;
-}
-
-.hero2::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 320px;
-  background: linear-gradient(to bottom,
-    rgba(3,6,30,1) 0%, rgba(3,6,30,0.95) 11%, rgba(3,6,30,0.89) 19%,
-    rgba(3,6,30,0.80) 27%, rgba(3,6,30,0.69) 35%, rgba(3,6,30,0.57) 43%,
-    rgba(3,6,30,0.44) 51%, rgba(3,6,30,0.31) 59%, rgba(3,6,30,0.19) 67%,
-    rgba(3,6,30,0.10) 75%, rgba(3,6,30,0.04) 83%, rgba(3,6,30,0.01) 91%,
-    rgba(3,6,30,0) 100%
-  );
-  pointer-events: none;
-  z-index: 1;
 }
 
 .hero2__inner {

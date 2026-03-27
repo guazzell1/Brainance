@@ -7,67 +7,13 @@
 (function () {
   'use strict';
 
-  /* ============================================================
-     VIDEO SCROLL — scale from 0.25 → 1 as user scrolls through
-     the section. Matches VideoScrollHero component behavior.
-     ============================================================ */
-  const vscrollSection = document.getElementById('vscroll');
-  const vscrollWrapper = document.getElementById('vscroll-wrapper');
+  /* ---------- Nav: always visible, scrolled state on scroll ---------- */
+  const nav = document.getElementById('nav');
+  nav.classList.add('is-visible');
 
-  if (vscrollSection && vscrollWrapper) {
-    const START_SCALE = 0.25;
-
-    /* If animation already played this session, skip it entirely */
-    if (sessionStorage.getItem('vscroll-done')) {
-      vscrollSection.style.display = 'none';
-    } else {
-      function updateVscroll() {
-        const rect        = vscrollSection.getBoundingClientRect();
-        const totalHeight = vscrollSection.offsetHeight;
-        const winH        = window.innerHeight;
-
-        const scrolled  = Math.max(0, -rect.top);
-        const maxScroll = totalHeight - winH;
-        const progress  = Math.min(Math.max(scrolled / maxScroll, 0), 1);
-
-        const scale = START_SCALE + progress * (1 - START_SCALE);
-
-        // Gradient covers bottom 45% → perceptual center is at 27.5% from top.
-        // From transform matrix: visual_offset = scale × translateY → translateY = offset / scale.
-        const screenOffset = -winH * 0.175 * (1 - progress);
-        const translateY   = screenOffset / scale;
-
-        vscrollWrapper.style.transform = `scale(${scale}) translateY(${translateY}px)`;
-
-        if (progress >= 1) {
-          /* Animation complete — collapse section and adjust scroll so hero is at top */
-          const sectionHeight = vscrollSection.offsetHeight;
-          const prevScroll    = window.scrollY;
-          vscrollSection.style.display = 'none';
-          window.scrollTo(0, Math.max(0, prevScroll - sectionHeight));
-          sessionStorage.setItem('vscroll-done', '1');
-          window.removeEventListener('scroll', updateVscroll);
-        }
-      }
-
-      window.addEventListener('scroll', updateVscroll, { passive: true });
-      updateVscroll();
-    }
-  }
-
-  /* ---------- Nav: show after vscroll section ---------- */
-  const nav          = document.getElementById('nav');
-  const vscrollEl    = document.getElementById('vscroll');
-
-  function updateNav() {
-    const threshold = vscrollEl ? vscrollEl.offsetHeight - window.innerHeight * 0.1 : 0;
-    const past      = window.scrollY >= threshold;
-    nav.classList.toggle('is-visible',  past);
-    nav.classList.toggle('is-scrolled', past && window.scrollY > threshold + 40);
-  }
-
-  window.addEventListener('scroll', updateNav, { passive: true });
-  updateNav();
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('is-scrolled', window.scrollY > 40);
+  }, { passive: true });
 
   /* ---------- Nav: mobile burger ---------- */
   const burger    = document.getElementById('burger');
