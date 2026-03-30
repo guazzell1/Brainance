@@ -1895,11 +1895,15 @@ section {
 .hero2__title {
   font-family: 'Space Mono', monospace;
   font-weight: 700;
-  font-size: clamp(2.8rem, 8vw, 7rem);
-  line-height: 1.05;
+  font-size: clamp(2.2rem, 6vw, 5.5rem);
+  line-height: 1.08;
   letter-spacing: -0.02em;
   color: var(--text);
   margin: 0 0 40px;
+}
+
+.hero2__line {
+  display: block;
 }
 
 .hero2__word {
