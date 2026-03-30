@@ -1914,9 +1914,9 @@ section {
   font-family: 'Space Mono', monospace;
   font-weight: 400;
   font-size: clamp(0.95rem, 1.8vw, 1.2rem);
-  color: rgba(255,255,255,0.7);
+  color: var(--text);
   line-height: 1.7;
-  max-width: 640px;
+  width: 100%;
   margin: 0 0 48px;
   opacity: 0;
   animation: hero2-fade-up 0.6s ease forwards;
