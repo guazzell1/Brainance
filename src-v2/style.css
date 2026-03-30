@@ -63,7 +63,7 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: 'DM Serif Display', Georgia, serif;
+  font-family: 'Space Mono', monospace;
   line-height: 1.15;
   letter-spacing: -0.02em;
 }
@@ -551,14 +551,14 @@ section {
 }
 
 .hero__stat-num {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Space Mono', monospace;
   font-size: 2rem;
   color: var(--text);
   line-height: 1;
 }
 
 .hero__stat-suffix {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Space Mono', monospace;
   font-size: 1.5rem;
   color: var(--lime);
 }
@@ -633,7 +633,7 @@ section {
 }
 
 .hero__card-value {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Space Mono', monospace;
   font-size: 2rem;
   color: var(--text);
   line-height: 1;
@@ -716,7 +716,7 @@ section {
 }
 
 .hero__card-sm-val {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Space Mono', monospace;
   font-size: 1.2rem;
   color: var(--text);
   line-height: 1.2;
@@ -754,7 +754,7 @@ section {
 }
 
 .logos__item {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Space Mono', monospace;
   font-size: 1.2rem;
   color: var(--text-faint);
   letter-spacing: 0.05em;
@@ -832,7 +832,7 @@ section {
 }
 
 .dore-card__highlight-text {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Space Mono', monospace;
   font-size: 1.25rem;
   font-style: italic;
   color: var(--text);
@@ -914,7 +914,7 @@ section {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Space Mono', monospace;
   font-size: 3rem;
   color: var(--text-faint);
   line-height: 1;
@@ -1021,7 +1021,7 @@ section {
 }
 
 .resultado-metric__num {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Space Mono', monospace;
   font-size: 1.5rem;
   color: var(--lime);
   line-height: 1;
@@ -1092,14 +1092,14 @@ section {
 }
 
 .resultados__number {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Space Mono', monospace;
   font-size: clamp(2rem, 4vw, 3rem);
   color: var(--lime);
   line-height: 1;
 }
 
 .resultados__number-suffix {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Space Mono', monospace;
   font-size: 1.5rem;
   color: var(--lime);
 }
@@ -1141,7 +1141,7 @@ section {
   border: 1px solid var(--border);
   display: grid;
   place-items: center;
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Space Mono', monospace;
   font-size: 1.1rem;
   color: var(--lime);
   flex-shrink: 0;
@@ -1349,7 +1349,7 @@ section {
 }
 
 .plano-card__amount {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Space Mono', monospace;
   font-size: 2.8rem;
   color: var(--text);
   line-height: 1;
