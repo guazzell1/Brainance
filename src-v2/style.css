@@ -1858,7 +1858,6 @@ section {
 .hero2__cta {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
   font-family: 'Space Mono', monospace;
   font-weight: 700;
   font-size: 0.9rem;
@@ -1876,6 +1875,43 @@ section {
 .hero2__cta:hover {
   background: #c5ff6a;
   transform: translateY(-2px);
+}
+
+/* Animated button effect */
+.btn--animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--animated .btn__text {
+  margin-right: 2rem;
+  transition: opacity 0.5s;
+}
+
+.btn--animated:hover .btn__text {
+  opacity: 0;
+}
+
+.btn--animated .btn__indicator {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  bottom: 4px;
+  border-radius: 4px;
+  width: 22%;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.12);
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.btn--animated:hover .btn__indicator {
+  width: calc(100% - 8px);
+}
+
+.btn--animated:active .btn__indicator {
+  transform: scale(0.97);
 }
 
 /* Features strip */
