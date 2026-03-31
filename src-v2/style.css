@@ -1339,6 +1339,12 @@ section {
   }
 }
 
+.planos__cta {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .planos__cta-note {
   font-size: 0.88rem;
   color: var(--text-muted);
