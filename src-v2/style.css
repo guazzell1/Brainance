@@ -1884,7 +1884,7 @@ section {
 }
 
 .btn--animated .btn__text {
-  margin-right: 2rem;
+  margin-right: 3rem;
   transition: opacity 0.5s;
 }
 
@@ -1898,7 +1898,7 @@ section {
   top: 4px;
   bottom: 4px;
   border-radius: 4px;
-  width: 22%;
+  width: 36px;
   display: grid;
   place-items: center;
   background: rgba(0, 0, 0, 0.12);
