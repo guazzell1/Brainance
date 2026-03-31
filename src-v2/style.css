@@ -1273,6 +1273,28 @@ section {
   position: relative;
 }
 
+.planos__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 2rem;
+  padding: 0;
+}
+
+.planos__list li {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+
+.planos__list li:last-child {
+  color: var(--lime);
+}
+
 .planos__cta {
   display: flex;
   flex-direction: column;
